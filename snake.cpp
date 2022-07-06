@@ -1,4 +1,4 @@
-#include "snake.hpp"
+#include "snake.h"
 
 Snake::Snake(const int& screenW, const int& screenH, const int& cell_dimensions) 
 :m_cell_pixels(cell_dimensions)
