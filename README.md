@@ -4,8 +4,8 @@ simple snake game using sdl2.
 
 # build on linux
 make sure to install sdl2 and cmake according to your distribution.
-sdl2 works out of the box on linux
-to compile this program
+sdl2 works out of the box on linux.
+# to compile this program
 - create build directory (mkdir build)
 - go inside and run root cmake text file (cd build; cmake ..)
 - compile using gcc (make)
