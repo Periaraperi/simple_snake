@@ -1,9 +1,13 @@
 #pragma once
 
+#define SDL_MAIN_HANDLED
 #include <SDL2/SDL.h>
+
 #include <vector>
 #include <queue>
 #include <time.h>
+#include <stdio.h>
+#include <string.h>
 
 class Snake {
 public:

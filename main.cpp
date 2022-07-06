@@ -1,4 +1,5 @@
 #include "snake.hpp"
+#include <stdio.h>
 
 int main() 
 {

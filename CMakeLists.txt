@@ -4,10 +4,28 @@ project(snake_game)
 
 set(SRCS main.cpp snake.cpp snake.hpp)
 
+add_executable(snake ${SRCS})
+
+if(UNIX)
+
 find_package(SDL2 REQUIRED)
 include_directories(${SDL2_INCLUDE_DIRS})
+target_link_libraries(snake PRIVATE ${SDL2_LIBRARIES})
 
-add_executable(snake ${SRCS})
-target_link_libraries(snake ${SDL2_LIBRARIES})
-target_compile_options(snake PRIVATE -Wall -Wextra -Wpedantic)
+elseif(WIN32)
+
+target_include_directories(snake PRIVATE 
+                           #${CMAKE_CURRENT_SOURCE_DIR}/external/SDL2/SDL2_mingw_64/include/
+                           ${CMAKE_CURRENT_SOURCE_DIR}/external/SDL2/SDL2_vc/include/
+                           )
+target_link_libraries(snake PRIVATE 
+                      #${CMAKE_CURRENT_SOURCE_DIR}/external/SDL2/SDL2_mingw_64/lib/libSDL2.dll.a
+                      #${CMAKE_CURRENT_SOURCE_DIR}/external/SDL2/SDL2_mingw_64/lib/libSDL2main.a
+                      ${CMAKE_CURRENT_SOURCE_DIR}/external/SDL2/SDL2_vc/lib/x64/SDL2main.lib
+                      ${CMAKE_CURRENT_SOURCE_DIR}/external/SDL2/SDL2_vc/lib/x64/SDL2.lib
+                      )
+endif()
+
+
+
 
