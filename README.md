@@ -11,7 +11,7 @@ sdl2 works out of the box on linux.
 - compile using gcc (make)
 
 # build on windows
-on windows you can use mingw or visual c++ compiler.
+on windows you can use mingw or visual c++ compiler and compile from powershell.
 You need to download sdl2 development version accordingly and link it to your project.
 I have provided 64 bit mingw version and visual c++ version in 'external' directory.
 You can change CMakeLists.txt to use either one, or set sdl2 yourself so it will work in IDE.
