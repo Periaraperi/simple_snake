@@ -1,7 +1,7 @@
 #include "snake.h"
 #include <stdio.h>
 
-int main() 
+int main(int argc, char** argv) 
 {
     if(SDL_Init(SDL_INIT_EVERYTHING)!=0) {
         printf("Could not init SDL %s \n", SDL_GetError());
